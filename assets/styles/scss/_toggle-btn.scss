@@ -1,0 +1,70 @@
+.billing-toggle-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(1rem);
+    .toggle-btn {
+        display: inline-block;
+        height: 1.38rem;
+        width: 2.5rem;
+        position: relative;
+        margin: 0 .75rem;
+        input {
+            opacity: 0;
+            height: 0;
+            width: 0;
+        }
+        .checkmark {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: inherit;
+            background-color: $Light-Grayish-Blue2;
+            transition: 0.4s;
+            border-radius: 2rem;
+            opacity: 0.85;
+            transition: 0.2s opacity;
+            &:hover {
+                opacity: 1;
+                // background: $Soft-Cyan;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                height: .88rem;
+                width: .88rem;
+                left: .3rem;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: white;
+                transition: 0.4s;
+                border-radius: 50%;
+            }
+        }
+        input:checked + .checkmark {
+            background-color: $Light-Grayish-Blue2;
+            &:hover {
+                opacity: 1;
+                // background: $Soft-Cyan;
+            }
+        }
+        input:checked + .checkmark:before {
+            transform: translate(1.15rem, -50%);
+        }
+    }
+}
+
+.yearly-billing::after {
+    // content: attr(discount) '% Discount';
+    content: '-' attr(discount) '%';
+    background: $Light-Grayish-Red;
+    color: $Light-Red;
+    font-size: .7rem;
+    border-radius: 2rem;
+    padding: .2em .75em;
+    margin-left: .25rem;
+}

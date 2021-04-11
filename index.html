@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+  <link rel="stylesheet" href="/assets/styles/styles.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div class="header-container wide-container">
+        <h1>Simple, traffic-based pricing</h1>
+        <div class="description">
+          <span>Sign-up for our 30-day trial. <span class="credit-card">No credit card required.</span></span>
+        </div>
+      </div>
+    </header>
+
+    <div class="wide-container">
+      <div class="container">
+        <div class="upper upper-padding">
+          <div class="pricing-container">
+            <span class="pageviews"></span>
+            <div class="price" data-price-input='{
+              "0": ["$", "8", "/ month"],
+              "1": ["$", "12", "/ month"],
+              "2": ["$", "16", "/ month"],
+              "3": ["$", "24", "/ month"],
+              "4": ["$", "36", "/ month"]
+            }'>
+              <span class="price-currency"></span>
+              <span class="price-amount"></span>
+              <span class="price-amount">.00</span>
+              <span class="price-month"></span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar">
+                <input type="range" name="slider" id="price-slider" class="slider" autocomplete="off" data-price-input='{
+                  "0": "10K Pageviews",
+                  "1": "50K Pageviews",
+                  "2": "100K Pageviews",
+                  "3": "500K Pageviews",
+                  "4": "1M Pageviews"
+                 }' min="0" max="4" value="2">
+              </div>
+            </div>
+          </div>
+    
+          
+
+          <!-- <div class="price-container-mobile">
+            <span class="price">$ <span class="price-number"></span> /month</span>
+          </div> -->
+  
+          <div class="billing-toggle-container">
+            <span>Monthly Billing</span>
+            <label class="toggle-btn">
+              <input type="checkbox" id="billing-toggle">
+              <span class="checkmark"></span>
+            </label>
+            <span class="yearly-billing">Yearly Billing</span>
+          </div>
+        </div>
+        
+        <div class="lower lower-padding">
+          <ul>
+            <li>Unlimited websites</li>
+            <li>100% data ownership</li>
+            <li>Email reports</li>
+          </ul>
+          <a class="trial-link" href="#">Start my trial</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/rontoyhacao" target="_blank">Ron Paolo Toyhacao</a>.
+  </div>
+  <script src="/assets/scripts/slider.js"></script>
+</body>
+</html>

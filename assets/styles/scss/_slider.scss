@@ -1,0 +1,52 @@
+.progress {
+    margin: 1.75rem 0;
+    order: 1;
+    .progress-bar {
+        input {
+            width: 100%;
+            appearance: none;
+            background: linear-gradient(
+            to right,
+            hsl(174, 76%, 80%) 0%,
+            hsl(174, 76%, 80%) 50%,
+            $Light-Grayish-Blue 50%,
+            $Light-Grayish-Blue 100% );
+            border-radius: 0.63rem;
+            height: 0.5rem;
+            outline: none;
+            &::-webkit-slider-thumb {
+                appearance: none;
+                height: 2.5rem;
+                width: 2.5rem;
+                background: url(/assets/images/icon-slider.svg) no-repeat;
+                background-position: center;
+                background-color: $Strong-Cyan;
+                border-radius: 50%;
+                cursor: grab;
+                box-shadow: 0 .75rem 2rem hsla(174, 86%, 45%, .6);
+                opacity: 1;
+                transition: opacity .2s;
+                &:active {
+                    cursor: grabbing;
+                }
+                &:hover {
+                    opacity: .8;
+                }
+            }
+            &::-moz-range-thumb {
+                appearance: none;
+                height: 2.5rem;
+                width: 2.5rem;
+                background: url(/assets/images/icon-slider.svg) no-repeat;
+                background-position: center;
+                background-color: $Strong-Cyan;
+                border-radius: 50%;
+                cursor: grab;
+                box-shadow: 0 .75rem 2rem hsla(174, 86%, 45%, .6);
+                &:active {
+                    cursor: grabbing;
+                }
+            }
+        }
+    }
+}

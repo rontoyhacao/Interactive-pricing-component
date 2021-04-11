@@ -1,0 +1,29 @@
+.upper {
+    border-bottom: 1px solid $Light-Grayish-Blue3;
+    .pricing-container {
+        display: flex;
+        flex-direction: column;
+        .pageviews {
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: .1rem;
+        }
+        .price {
+            order: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .price-currency,
+            .price-amount {
+                color: $Dark-Desaturated-Blue;
+                font-weight: 800;
+                font-size: 2rem;
+                letter-spacing: -0.0625rem;
+            }
+            .price-month {
+                margin: 0 .75rem;
+            }
+        }
+    }
+}
+
