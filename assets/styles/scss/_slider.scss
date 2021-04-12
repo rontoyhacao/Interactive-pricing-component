@@ -46,6 +46,9 @@
                 &:active {
                     cursor: grabbing;
                 }
+                &:hover {
+                    opacity: .8;
+                }
             }
         }
     }

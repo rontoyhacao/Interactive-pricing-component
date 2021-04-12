@@ -1,0 +1,77 @@
+@media screen and (min-width: 768px) {
+    span,
+    ul {
+    font-size: initial;
+    }
+
+    body {
+        height: 100vh;
+        // background-size: contain;
+    }
+
+    .upper-padding {
+        padding: 2.25rem 2.5rem;
+    }
+
+    .lower-padding {
+        padding: 1.5rem 2.5rem;
+    }
+
+    header {
+        padding: 4rem 0 2.5rem;
+        .header-container {
+            padding: 2.5rem 0;
+            h1 {
+                font-size: 1.75rem;
+            }
+            .description .credit-card {
+                display: inline-block;
+            }
+        }
+    }
+
+    .container {
+        max-width: 540px;
+        margin: 0 auto;
+    }
+
+    .upper .pricing-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        .price {
+            order: 1;
+            .price-currency,
+            .price-amount {
+                font-size: 2.5rem;
+            }
+        }
+        .progress {
+            order: 2;
+            width: 100%;
+        }
+    }
+
+    .lower {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        ul {
+            text-align: left;
+            li {
+                font-size: .75rem;
+            }
+        }
+        .trial-link {
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    body {
+        background-size: contain;
+    }
+}

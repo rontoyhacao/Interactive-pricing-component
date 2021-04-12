@@ -18,7 +18,7 @@ pricingOutput.data = JSON.parse(pricingOutputEl.dataset.priceInput);
 
 // discount
 const toggleBilling = document.querySelector('.toggle-btn input');
-//
+// set value for discount and discount calculation to display
 const discountHTML = 25;
 const discountPercentage = discountHTML * 0.01;
 const yearlyBilling = document.querySelector('.yearly-billing');
@@ -38,13 +38,13 @@ toggleBilling.addEventListener('input', () => {
     handlePricingSlider(pricingInput, pricingOutput);
 });
 
-// input to output
+// bind input to output
 function handlePricingSlider(input, output) {
-    //
+    // output value progress
     if (input.currentValEl) {
         input.currentValEl.innerHTML = input.data[input.el.value];
     }
-    //
+    // update prices
     if (output.currency) {
         output.currency.innerHTML = output.data[input.el.value][0];
     }
@@ -63,7 +63,7 @@ pricingSlider.addEventListener('input', () => {
     handlePricingSlider(pricingInput, pricingOutput);
 });
 
-//
+// slider progress color
 document.querySelector('.slider').oninput = function () {
     var value = ((this.value - this.min) / (this.max - this.min)) * 100;
     this.style.background =

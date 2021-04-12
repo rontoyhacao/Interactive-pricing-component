@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
 .attribution {
-  font-size: .69rem;
+  font-size: .65rem;
   text-align: center;
-  margin-top: 2rem;
+  padding: 2rem 0;
 }
 
 .attribution a {
@@ -51,7 +51,7 @@ h1 {
 }
 
 header {
-  margin: 3.5rem 0 1.55rem;
+  padding: 3.5rem 0 1.55rem;
   text-align: center;
 }
 
@@ -191,6 +191,10 @@ header .header-container .description .credit-card {
   cursor: grabbing;
 }
 
+.progress .progress-bar input::-moz-range-thumb:hover {
+  opacity: .8;
+}
+
 .billing-toggle-container {
   margin-top: 2rem;
   display: -webkit-box;
@@ -265,8 +269,8 @@ header .header-container .description .credit-card {
 }
 
 .billing-toggle-container .toggle-btn input:checked + .checkmark:before {
-  -webkit-transform: translate(1.15rem, -50%);
-          transform: translate(1.15rem, -50%);
+  -webkit-transform: translate(1rem, -50%);
+          transform: translate(1rem, -50%);
 }
 
 .yearly-billing::after {
@@ -277,6 +281,33 @@ header .header-container .description .credit-card {
   border-radius: 2rem;
   padding: .2em .75em;
   margin-left: .25rem;
+}
+
+@media screen and (max-width: 365px) {
+  .yearly-billing::after {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .billing-toggle-container {
+    -webkit-transform: translateX(3rem);
+            transform: translateX(3rem);
+    margin-top: 1.5rem;
+  }
+  .billing-toggle-container .toggle-btn .checkmark:hover {
+    background: #a5f3eb;
+  }
+  .billing-toggle-container input:checked + .checkmark:hover {
+    background: #a5f3eb;
+  }
+  .yearly-billing::after {
+    content: attr(discount) "% Discount";
+  }
+  .monthly-billing,
+  .yearly-billing {
+    font-size: .75rem;
+  }
 }
 
 .lower ul {
@@ -307,5 +338,95 @@ header .header-container .description .credit-card {
 
 .lower .trial-link:hover {
   color: white;
+}
+
+@media screen and (min-width: 768px) {
+  span,
+  ul {
+    font-size: initial;
+  }
+  body {
+    height: 100vh;
+  }
+  .upper-padding {
+    padding: 2.25rem 2.5rem;
+  }
+  .lower-padding {
+    padding: 1.5rem 2.5rem;
+  }
+  header {
+    padding: 4rem 0 2.5rem;
+  }
+  header .header-container {
+    padding: 2.5rem 0;
+  }
+  header .header-container h1 {
+    font-size: 1.75rem;
+  }
+  header .header-container .description .credit-card {
+    display: inline-block;
+  }
+  .container {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+  .upper .pricing-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .upper .pricing-container .price {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .upper .pricing-container .price .price-currency,
+  .upper .pricing-container .price .price-amount {
+    font-size: 2.5rem;
+  }
+  .upper .pricing-container .progress {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 100%;
+  }
+  .lower {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .lower ul {
+    text-align: left;
+  }
+  .lower ul li {
+    font-size: .75rem;
+  }
+  .lower .trial-link {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  body {
+    background-size: contain;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
