@@ -72,4 +72,4 @@ Since this project showed me how to manipulate the DOM, I may as well want to fo
 
 ## Acknowledgments
 
-I would highly like to thank and give acknowledgement to [Bryan Lee](https://www.frontendmentor.io/profile/BL1133) from Front-end Mentor for his solution. I actually wouldn't be able to make it if it weren't for his solution particularly with DOM manipulation part since I'm still learning JS at the moment. His solution has been a huge help to me.
+I would highly like to thank and give acknowledgement to [Bryan Lee](https://www.frontendmentor.io/profile/BL1133) from Front-end Mentor for his solution. I actually wouldn't be able to make it if it weren't for his solution particularly with DOM manipulation part since I'm still learning JS at the moment. His solution has been a huge help to me in making this project.
