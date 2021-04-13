@@ -57,7 +57,7 @@
 }
 
 .yearly-billing::after {
-    content: '-' attr(discount) '%';
+    content: '-' attr(data-discount) '%';
     background: $Light-Grayish-Red;
     color: $Light-Red;
     font-size: .7rem;
@@ -83,7 +83,7 @@
         }
     }
     .yearly-billing::after {
-        content: attr(discount) '% Discount';
+        content: attr(data-discount) '% Discount';
     }
     .monthly-billing,
     .yearly-billing {
