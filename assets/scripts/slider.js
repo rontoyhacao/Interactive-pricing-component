@@ -22,7 +22,7 @@ const toggleBilling = document.querySelector('.toggle-btn input');
 const discountHTML = 25;
 const discountPercentage = discountHTML * 0.01;
 const yearlyBilling = document.querySelector('.yearly-billing');
-yearlyBilling.setAttribute('discount', discountHTML);
+yearlyBilling.setAttribute('data-discount', discountHTML);
 
 // check billing input
 let stateBilling = 0;
